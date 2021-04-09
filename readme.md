@@ -20,3 +20,5 @@
 - Colocar bootstrap no site de questões
 - Fazer um app que calcula o imc da pessoa
 - Fazer um jogo da memória com 3 pares de imagens apenas
+- Fazer mudança de tab usando os marcadores
+- Validar email!
