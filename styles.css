@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #f8f9faff;
+  --gray-100: #e9ecefff;
+  --gray-200: #dee2e6ff;
+  --gray-300: #ced4daff;
+  --gray-400: #adb5bdff;
+  --gray-500: #6c757dff;
+  --gray-600: #495057ff;
+  --gray-700: #343a40ff;
+  --black: #212529ff;
+
+  --prussian-blue: #003049ff;
+  --maximum-red: #d62828ff;
+  --orange: #f77f00ff;
+  --maximum-yellow-red: #fcbf49ff;
+  --lemon-meringue: #eae2b7ff;
+
+  --margin-top-mini: 1rem;
+  --margin-top-small: 1.25rem;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 300 1rem "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: 600 "Rubik", sans-serif;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--prussian-blue);
+}
+
+button {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 0.4rem;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  width: 80px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input {
+  padding: 0.4rem;
+  width: 100%;
+  border: 1px solid var(--gray-500);
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+input.invalid {
+  background: #f8d8d8;
+}
+
+#presentation-section {
+  margin: 1rem auto; 
+  width: 90%;
+  max-width: 900px;
+}
+
+#presentation-section h1 {
+  color: var(--maximum-yellow-red);
+  margin-bottom: 2rem;
+}
+
+#presentation-section p {
+  color: var(--gray-300);
+  margin-bottom: 1rem;
+}
+
+#presentation-section a { 
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: 600;
+}
+
+
+.tab {
+  display: none;
+}
+
+#form-section {
+  width: 90%;
+  margin: 0 auto;
+  background: var(--white);
+  max-width: 900px;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 300px;
+}
+
+#form-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--gray-600);
+}
+
+#form-section .buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+#form-section .buttons-container button + button {
+  margin-left: 0.5rem;
+}
+
+#form-section .steps-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#form-section .step {
+  background: var(--gray-600);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+#previousButton {
+  background: var(--gray-300);
+}
+
+#form-section .step.active {
+  opacity: 1;
+}
+
+#form-section .step.finish {
+  background: var(--orange);
+}

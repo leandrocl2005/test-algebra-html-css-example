@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Like cats</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+  <style>
+    .custom-img {
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 200ms;
+    }
+
+    .custom-img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Like a cat</h1>
+
+    <div class="row">
+      <div class="col">
+        <img
+          src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          class="img-fluid custom-img" onclick="updateLikes('raul')" alt="Raul">
+        <p>Raul</p>
+      </div>
+      <div class="col">
+        <img
+          src="https://images.unsplash.com/photo-1574231164645-d6f0e8553590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+          class="img-fluid custom-img" onclick="updateLikes('drack')" alt="Drack">
+        <p>Drack</p>
+      </div>
+      <div class="col">
+        <img
+          src="https://images.unsplash.com/photo-1557246565-8a3d3ab5d7f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          class="img-fluid custom-img" onclick="updateLikes('zoe')" alt="Zoe">
+        <p>Zoe</p>
+      </div>
+
+      <hr>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Likes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Raul</th>
+            <td id="like-raul">0</td>
+          </tr>
+          <tr>
+            <th scope="row">Drack</th>
+            <td id="like-drack">0</td>
+          </tr>
+          <tr>
+            <th scope="row">Zoe</th>
+            <td id="like-zoe">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function updateLikes(catName) {
+
+      // pegar o valor atual
+      let actualValue = Number(document.getElementById("like-" + catName).innerText);
+
+      // somar um ao valor atual
+      actualValue += 1;
+
+      // mostrar o novo valor
+      document.getElementById("like-" + catName).innerText = actualValue;
+
+    }
+  </script>
+
+</body>
+
+</html>
