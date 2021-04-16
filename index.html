@@ -17,7 +17,9 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="./favicon.png" type="image/png" sizes="16x16">
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 
 <body>
@@ -26,10 +28,7 @@
   <section id="presentation-section">
     <h1>Teste de álgebra linear</h1>
 
-    <p>Teste seus conhecimentos em matrizes. Este teste avalia conteúdos de determinantes, inversas, transpostas e
-      multiplicação de matrizes. Também haverá uma questão de sistemas lineares.</p>
-
-    <p>As perguntas do teste estão
+    <p>Se quiser baixar a prova clique
       <a target="_blank" href="https://www.dropbox.com/s/xzly2ctkxkn3ixi/matrizes_profmat_teste.pdf?dl=0">
         aqui
       </a>.
@@ -38,12 +37,11 @@
 
   <!-- Seção de formulário -->
   <section id="form-section">
-    <h2>Teste de matrizes e sistemas</h2>
 
     <form id="test-form" action="https://formspree.io/f/xbjqjqdy" method="POST">
 
       <div class="tab">
-        Identificação do aluno:
+        <h3>Identificação do aluno:</h3>
         <p>
           <input name="full_name" placeholder="Digite seu nome completo..." oninput="this.className = ''">
         </p>
@@ -53,21 +51,46 @@
       </div>
 
       <div class="tab">
-        Questão 1
+        <h3>Questão 1</h3>
+
+        <p>
+          Encontre o determinante da matriz
+          \[
+          A = \left( \begin{array}{rrrr}
+          -4 & 0 & -1 & 0 \\
+          -4 & 0 & -1 & 0 \\
+          -4 & 0 & -1 & 0 \\
+          -4 & 0 & -1 & 0 \\
+          \end{array} \right)
+          \]
+        </p>
+
         <p>
           <input name="question_1" placeholder="Digite sua resposta ..." oninput="this.className = ''">
         </p>
       </div>
 
       <div class="tab">
-        Questão 2
+        <h3>Questão 2</h3>
+
+        <p>Verdadeiro ou falso? Se \(A\) é uma matriz quadrada real de ordem \(4\), isto é, \(A \in {\cal{M}}_{n \times
+          n} \), então \[det(3A) = 3det(A).\] </p>
+
+
         <p>
           <input name="question_2" placeholder="Digite sua resposta ..." oninput="this.className = ''">
         </p>
       </div>
 
       <div class="tab">
-        Questão 3
+        <h3>Questão 3</h3>
+
+        <p>
+          Calcule o limite
+          \[
+          \lim_{x\rightarrow 0} \frac{\sqrt[5]{x^4 + 1} -1 }{x^4}
+          \]
+        </p>
         <p>
           <input name="question_3" placeholder="Digite sua resposta ..." oninput="this.className = ''">
         </p>
@@ -86,6 +109,14 @@
       </div>
     </form>
   </section>
+
+  <section id="comments">
+    <div id="inject-comments-for-uterances"></div>
+  </section>
+
+  <script src="https://utteranc.es/client.js" repo="leandrocl2005/utt" issue-term="pathname" label="duvida"
+    theme="github-light" crossorigin="anonymous" async>
+    </script>
 
 
   <script src="./custom.js"></script>
