@@ -114,12 +114,41 @@
     <div id="inject-comments-for-uterances"></div>
   </section>
 
+  <section id="weather">
+    <hr>
+    <p id="temperature"></p>
+    <hr />
+  </section>
+
   <script src="https://utteranc.es/client.js" repo="leandrocl2005/utt" issue-term="pathname" label="duvida"
     theme="github-light" crossorigin="anonymous" async>
     </script>
 
 
   <script src="./custom.js"></script>
+
+
+  <script>
+    const key = "04c879d7";
+
+    const woeid_uberaba = "455916";
+
+    const url = `https://api.hgbrasil.com/weather?format=json-cors&key=${key}&woeid=${woeid_uberaba}`;
+
+
+    async function loadTemperature() {
+      await fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const temperature = data.results.temp;
+          document.getElementById('temperature').innerHTML = `A temperatura em Uberaba agora é de ${temperature} <sup>o</sup>C`
+
+        })
+    }
+
+    loadTemperature();
+
+  </script>
 </body>
 
 </html>

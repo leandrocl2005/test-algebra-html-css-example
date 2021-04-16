@@ -165,3 +165,23 @@ input.invalid {
 #form-section .step.finish {
   background: var(--orange);
 }
+
+#weather {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+#weather hr {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+#weather p {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
