@@ -13,7 +13,7 @@
 # Aula 2
 
 - Bootstrap
-- Javascript
+- Javascript (variáveis, DOM, métodos, funções)
 
 # Desafio da aula 2
 
